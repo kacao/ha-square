@@ -29,7 +29,6 @@ _LOGGER = logging.getLogger(__name__)
 CONFIG_SCHEMA = vol.Schema({
     DOMAIN: vol.Schema({
         vol.Optional(CONF_BUSINESSES): vol.All(cv.ensure_list, [CONFIG_BUSINESS]),
-
     })
 }, extra=vol.ALLOW_EXTRA)
 
