@@ -52,7 +52,7 @@ SERVICE_UPDATE_EMPLOYEES = 'update_employees'
 SERVICE_UPDATE_OPEN_SHIFTS = 'update_open_shifts'
 SERVICE_UPDATE_SALES = 'update_sales'
 
-def async_setup(hass, config, discovery_info=None):
+async def async_setup(hass, config, discovery_info=None):
 
     component = EntityComponent(_LOGGER, DOMAIN, hass)
     await component.async_setup(config)
