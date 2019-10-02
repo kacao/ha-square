@@ -1,0 +1,7 @@
+{
+  "domain": "square",
+  "name": "Square integration",
+  "dependencies": [],
+  "codeowners": ["@kacao"],
+  "requirements": ["aiohttp", "python_dateutil", "pytz"]
+}
