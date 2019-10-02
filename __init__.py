@@ -5,7 +5,7 @@ from typing import Optional, Text
 import voluptuous as vol
 from homeassistant.components.sensor import PLATFORM_SCHEMA
 from homeassistant.const import (
-        CONF_ENTITY_ID,
+        CONF_ENTITY_ID
 )
 from homeassistant.helpers.entity import (
         async_generate_entity_id, Entity
@@ -29,16 +29,17 @@ _LOGGER = logging.getLogger(__name__)
 CONFIG_SCHEMA = vol.Schema({
     DOMAIN: vol.Schema({
         vol.Optional(CONF_BUSINESSES): vol.All(cv.ensure_list, [CONFIG_BUSINESS]),
-    )}
-), extra=vol.ALLOW_EXTRA}
 
-BUSINESS_SCHEMA = volSchema({
+    })
+}, extra=vol.ALLOW_EXTRA)
+
+BUSINESS_SCHEMA = vol.Schema({
     vol.Required(CONF_NAME): cv.string,
     vol.Required(CONF_API_KEY): cv.string,
     vol.Required(CONF_BASE_URL): cv.string,
     vol.Required(CONF_OPEN): int,
     vol.Required(CONF_CLOSE): int,
-)}
+})
 
 LOCATION_SCHEMA = vol.Schema({
     LOCATION: vol.Schema({

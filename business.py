@@ -1,3 +1,4 @@
+
 import asyncio
 import json, locale, datetime
 from client import Client
@@ -42,7 +43,7 @@ class Business(Entity):
 
     async def _update_employees(self):
         """ refresh employees 
-            TODO: cursor when employees are more than 100 """
+            TODO: handle cursors when employees are more than 100 """
         url = make_url(CONF_ENDPOINT_LIST_EMPLOYEES)
         params = {}
         res = await self.client.get(url, params)
