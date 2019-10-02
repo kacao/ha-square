@@ -54,7 +54,7 @@ SERVICE_UPDATE_SALES = 'update_sales'
 
 async def async_setup(hass, config, discovery_info=None):
 
-    component = EntityComponent(_LOGGER, DOMAIN, hass)
+    """component = EntityComponent(_LOGGER, DOMAIN, hass)
     await component.async_setup(config)
     config = config[DOMAIN]
     entities = []
@@ -83,5 +83,5 @@ async def async_setup(hass, config, discovery_info=None):
         'update_sales'
     )
 
-    await component.async_add_entities(entities)
+    await component.async_add_entities(entities)"""
 
